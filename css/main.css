@@ -1,0 +1,48 @@
+.header .nav{
+	background-color: rgb(96, 111, 238);
+	overflow: auto;
+}
+.header .nav a{
+	background-color: rgb(96, 111, 238);
+	font-size: 25px;
+	color: black;
+	padding:13px;
+	float: left;
+	text-decoration: none;
+}
+.header .nav a:hover{
+	background-color: rgb(160, 184, 221);
+}
+.header .logo{
+	width:auto;
+	height:auto;
+	background-color: rgb(139, 209, 241);
+	margin-top:0px;
+	margin-left:0px;
+	overflow:auto;
+	padding:15px;
+}
+.main #pics img{
+	width: 100%;
+	height: 400px;
+}
+.header .me{
+	float:left;
+	vertical-align: middle;
+}
+.main  .news-detail .news-detail1 a{
+	text-decoration: none;
+	color: rgb(235, 112, 159);
+}
+.main  .news-detail .news-detail1 a:hover{
+	color:lightblue;
+}
+.main .tab table{
+	border:3px solid rgb(189, 168, 238);
+	font-size: 18px;
+	border-collapse: collapse;
+}
+.main .tab table tr td,.main .tab table tr th{
+	border:2px solid rgb(189, 168, 238);
+	padding: 5px;
+}

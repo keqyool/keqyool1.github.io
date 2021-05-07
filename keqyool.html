@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>kk</title>
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<style>
+            #content{
+                width :500px;
+                height:300px;
+                border: 1px solid 0###;
+                margin: 15px auto;
+            }
+            #search{
+                width :500px;
+                height:300px;
+                border: 1px;
+                margin: 15px auto ;
+            }
+            #change{
+                background: yellow;
+            }
+		</style>
+		<script>
+            window.onload=function()
+            {
+                var btn=document.getElementById('btn');
+                var texts=document.getElementById('texts');
+                //var content=document.getElementById('content');
+                var content=document.getElementsByClassName('con')[0];
+                var str=content.innerHTML;
+                console.log(str);
+                //console.log(str)
+                btn.onclick=function(){
+                    
+                    var val=texts.value;
+                    if (val=="")
+                    {
+                        alert("请输入内容");
+                    }
+                    if(str.indexOf(val)==-1)
+                    {
+                        alert('你输入的内容不在范围内');
+                    }
+                    else
+                    {
+                        content.innerHTML=str.split(val).join('<span id="change">'+val+'</span>');
+                    }
+                }
+            }
+
+        </script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="header">
+					<div class="logo">
+						<img src="logo/logo.png"/>
+					</div>
+			</div>
+			<div class="main">
+				<div id="pics">
+					<img src="img/工大.jpg" />
+				</div>
+			<div class="tab"style="float:left;margin-right:10px">
+					<table>
+						<tr>
+							<th>学号</th>
+							<th>班级</th>
+							<th>姓名</th>
+							<th>性别</th>
+						</tr>
+						<tr>
+							<td>201716060201</td>
+							<td>1702</td>
+							<td>贾鹏政</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td>201716060202</td>
+							<td>1702</td>
+							<td>钱科旭</td>
+							<td>男</td>
+						</tr>
+						<tr>
+							<td>201716060203</td>
+							<td>1702</td>
+							<td>王首木</td>
+							<td>男</td>
+						</tr>
+					</table>
+					<div  class="con" id="content" >
+						河南工业大学（Henan University of Technology）位于河南省郑州市，是河南省人民政府和国家粮食局共建高校、河南省特色骨干大学建设高校，入选2011计划、中西部高校基础能力建设工程、卓越工程师教育培养计划、卓越农林人才教育培养计划。
+						空间信息与数字技术（Spatial Information and Digital Technology）专业培养具有深厚软件工程理论基础和空间信息技术、通信技术以及计算机网络技术，有一定的管理和经济知识基础，能运用数字工程技术对环境、人文、社会、经济等各类信息进行数字化处理，实现网络化传输、可视化表达、智能化决策的复合型空间信息产业、技术与应用的高级专门人才。
+					</div>    
+						<input type="text" id="texts"/>
+						<input type="button" value="查找" id ="btn"/>
+					</div>
+			</div>
+			<div class="news-detail">
+				
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/main.js"></script>
